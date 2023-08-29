@@ -22,10 +22,10 @@ public class Product implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String Name;
+	private String name;
 	private String description;
 	private Double price;
-	private String ImgUrl;
+	private String imgUrl;
 	
 	@ManyToMany
 	@JoinTable(name = "tb_product_category", joinColumns = @JoinColumn(name = "product_id"), inverseJoinColumns = @JoinColumn(name = "category_id"))
@@ -38,10 +38,10 @@ public class Product implements Serializable {
 	public Product(Integer id, String name, String description, Double price, String imgUrl) {
 		super();
 		this.id = id;
-		Name = name;
+		this.name = name;
 		this.description = description;
 		this.price = price;
-		ImgUrl = imgUrl;
+		this.imgUrl = imgUrl;
 	}
 
 	public Integer getId() {
@@ -53,11 +53,11 @@ public class Product implements Serializable {
 	}
 
 	public String getName() {
-		return Name;
+		return this.name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public String getDescription() {
@@ -77,11 +77,11 @@ public class Product implements Serializable {
 	}
 
 	public String getImgUrl() {
-		return ImgUrl;
+		return this.imgUrl;
 	}
 
 	public void setImgUrl(String imgUrl) {
-		ImgUrl = imgUrl;
+		this.imgUrl = imgUrl;
 	}
 
 	public Set<Category> getCategories() {
