@@ -45,11 +45,11 @@ public class StandardError implements Serializable {
 		this.status = status;
 	}
 
-	public String getErro() {
+	public String getError() {
 		return error;
 	}
 
-	public void setErro(String error) {
+	public void setError(String error) {
 		this.error = error;
 	}
 
@@ -67,5 +67,5 @@ public class StandardError implements Serializable {
 
 	public void setPath(String path) {
 		this.path = path;
-	}	
+	}
 }
